@@ -57,20 +57,20 @@ export const ReviewRiver: React.FC = () => {
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-white font-bold text-sm">4.7 / 5 Kurumsal &amp; Google Değerlendirmesi</span>
+              <span className="text-white font-bold text-sm">4.9 / 5 Müteahhit, Şantiye &amp; Bayi Memnuniyeti</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl font-bold text-white tracking-tight">
-              Bayilerimizin, Fabrika ve Kurumların Yorumları
+              Şantiyelerin, Müteahhitlerin ve Bayilerimizin Yorumları
             </h2>
           </div>
 
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Emek+Lastik+Organize+Sanayi+B%C3%B6lgesi+Tekkek%C3%B6y+Samsun"
+            href="https://www.google.com/maps/search/?api=1&query=Se%C3%A7kay+Makina+Ostim+1230+Sokak+Yenimahalle+Ankara"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 px-4 py-2.5 rounded-lg border border-slate-700 transition-colors self-start md:self-auto"
           >
-            <span>Google Haritalar&apos;da Fabrika Konumu &amp; Yorumlar</span>
+            <span>Google Haritalar&apos;da Konum &amp; Değerlendirmeler</span>
             <ExternalLink className="w-4 h-4 text-sky-400" />
           </a>
         </div>

@@ -2,74 +2,109 @@ export interface ReviewItem {
   id: number;
   author: string;
   role: string;
+  avatarText: string;
   rating: number;
   timeAgo: string;
+  productGroup: string;
   content: string;
+  highlight: string;
 }
 
 export const reviewsList: ReviewItem[] = [
   {
     id: 1,
-    author: "Mustafa Karahan",
-    role: "Toptan Ayakkabı & Çizme Bayii • Karadeniz",
+    author: 'Mustafa Karahan',
+    role: 'Şantiye Şefi • Ankara',
+    avatarText: 'MK',
     rating: 5,
-    timeAgo: "2 hafta önce",
-    content: "Yıllardır Samsun OSB'deki Emek Lastik fabrikasından toptan Ulaş çizme ve Emek lastik ayakkabı alıyoruz. Kalıpları tam standart, kauçuk ve PVC kalitesi piyasada rakipsiz. Sevkiyatları her zaman dakik ve kurumsal bir fabrika."
+    timeAgo: '2 hafta önce',
+    productGroup: 'SKE 58 Kendinden Konvertörlü Vibratör',
+    content:
+      'Şantiyelerimizde yıllardır Seçkay’ın 220V kendinden konvertörlü SKE 58 vibratörlerini kullanıyoruz. İthal makinelerin yarı fiyatına çok daha dayanıklı ve güçlü. Arıza yaptığında Ostim’de aynı gün yedek parça ve servis desteği veriyorlar.',
+    highlight: 'Yerli Üretim & Aynı Gün Servis',
   },
   {
     id: 2,
-    author: "İbrahim Çelik",
-    role: "İnşaat & Şantiye Satınalma Müdürü",
+    author: 'Cengiz Özdemir',
+    role: 'İnşaat Taahhüt Firması • İstanbul',
+    avatarText: 'CÖ',
     rating: 5,
-    timeAgo: "1 ay önce",
-    content: "Şantiyelerimizdeki personeller için EMEX serisi çelik burunlu iş güvenliği botlarını ve Ulaş PVC çizmeleri tercih ediyoruz. Zorlu saha şartlarında taban dayanımı ve su geçirmezliği çok başarılı. Yerli üretim olması büyük gurur."
+    timeAgo: '1 ay önce',
+    productGroup: 'SK 4 Dört Çıkışlı Elektrikli Konvertör',
+    content:
+      'Toplu konut projemiz için 4 adet SK4 elektrikli konvertör ve 60’lık SKV iç vibratör aldık. Beton dökümü sırasında saatlerce kesintisiz çalışmasına rağmen ısınma veya devir düşmesi yapmıyor. Gerçekten sağlam sanayi işi.',
+    highlight: 'Yüksek Devir & Sıfır Isınma',
   },
   {
     id: 3,
-    author: "Hasan Özdemir",
-    role: "Tarım & Ziraat Ekipmanları Tedarikçisi",
+    author: 'İbrahim Yalçın',
+    role: 'Altyapı & Köprü Müteahhidi • Samsun',
+    avatarText: 'İY',
     rating: 5,
-    timeAgo: "1 ay önce",
-    content: "Çiftçilerimizin ve çay/fındık üreticilerimizin en çok aradığı marka Emek ve Kurşun lastik ayakkabılar. Babamızdan beri bildiğimiz 1961 kuruluşlu köklü Samsun fabrikası, kalitesini hiç bozmadan devam ettiriyor."
+    timeAgo: '1 ay önce',
+    productGroup: 'SKBK B1 Honda GX160 Benzinli Konvertör',
+    content:
+      'Elektrik hattı olmayan viyadük ve menfez şantiyelerimiz için Honda GX160 motorlu benzinli konvertörlerinden aldık. Tek çekişte çalışıyor, aynı anda iki vibratörü tam güçte besliyor. Kargoyla ertesi gün şantiyemize ulaştı.',
+    highlight: 'Elektriksiz Sahada Tam Güç',
   },
   {
     id: 4,
-    author: "Kadir Yılmaz",
-    role: "İş Güvenliği Ekipmanları Firması • Ankara",
+    author: 'Ahmet Başaran',
+    role: 'Yapı Denetim & Kalıp Ustası • Konya',
+    avatarText: 'AB',
     rating: 5,
-    timeAgo: "2 ay önce",
-    content: "EMEX Madrid ve Milano serisi süet/deri iş ayakkabılarının toptan siparişini geçtik. Hem görünümü çok şık hem de işçilerin gün boyu ayağını yormayan rahat bir tabana sahip. Fabrika yönetimi çok ilgili."
+    timeAgo: '2 ay önce',
+    productGroup: 'Takmatik Kelle Vibratör (50’lik & 60’lık)',
+    content:
+      'Takmatik kelle vibratör sistemi şantiyede büyük kolaylık sağladı. Hortumu komple değiştirmeden sadece şişe kısmını dakikalar içinde değiştirebiliyoruz. Seçkay ustalarının bobinaj ve sarım işçiliği birinci sınıf.',
+    highlight: 'Takmatik Hızlı Değişim',
   },
   {
     id: 5,
-    author: "Ahmet Aydın",
-    role: "Güneydoğu Toptan Dağıtım",
+    author: 'Hüseyin Polat',
+    role: 'İnşaat Malzemeleri & Makina Bayii • Gaziantep',
+    avatarText: 'HP',
     rating: 5,
-    timeAgo: "3 ay önce",
-    content: "Eldi ve Emek EVA çocuk/yetişkin terlik grubunda fiyat-performans olarak Türkiye'nin en güçlü üreticilerinden biri. Yüksek adetli siparişlerimizde bile termin sürelerine birebir uyuyorlar."
+    timeAgo: '3 ay önce',
+    productGroup: 'Toptan Beton Vibratörü & Yedek Parça',
+    content:
+      'Bölgemizdeki müteahhitlere yıllardır Seçkay Makina ürünlerini satıyoruz. Hem 38’likten 80’liğe kadar tüm çapların stokta olması hem de arkasında duran yerli bir üretici olması müşterilerimize güven veriyor.',
+    highlight: '81 İle Hızlı Sevkiyat',
   },
   {
     id: 6,
-    author: "Süleyman Koç",
-    role: "Kauçuk & Sanayi Hammadde Alıcısı",
+    author: 'Erdal Koçak',
+    role: 'Baraj & HES Proje Müdürü • Artvin',
+    avatarText: 'EK',
     rating: 5,
-    timeAgo: "3 ay önce",
-    content: "Rejenere kauçuk ve granül hammadde tedariğinde Emek Kauçuk Sanayi ile çalışıyoruz. Üretim tesisleri 20.000 m² üzerinde çok modern ve standartları yüksek. Samsun sanayisinin yüz akı bir kuruluş."
+    timeAgo: '3 ay önce',
+    productGroup: 'SKV 75 & SKV 80 Ağır Hizmet Vibratörü',
+    content:
+      'Kütle beton dökümlerinde 75’lik ve 80’lik yüksek frekanslı vibratörlerini kullanıyoruz. 12.000 devir vuruş gücü sayesinde betonda hiç boşluk bırakmıyor. Ağır şantiye şartlarına en iyi dayanan yerli marka.',
+    highlight: 'Baraj & Kütle Betona Uygun',
   },
   {
     id: 7,
-    author: "Osman Yıldız",
-    role: "Bölge Bayii • Doğu Anadolu",
+    author: 'Serdar Çetin',
+    role: 'Teknik Satınalma Müdürü • İzmir',
+    avatarText: 'SÇ',
     rating: 5,
-    timeAgo: "4 ay önce",
-    content: "Kış sezonunda Meykers fermuarlı kar botları ve içi peluşlu Ulaş çizmeler yok satıyor. Soğuk iklim şartlarına tam uyumlu, sağlam ve ekonomik ürünler. Emek ailesine teşekkür ederiz."
+    timeAgo: '4 ay önce',
+    productGroup: 'Motor Sarımı & Vibratör Revizyonu',
+    content:
+      'Elimizdeki farklı markalara ait arızalı beton vibratörlerini ve konvertörleri Ostim’deki Seçkay servisine gönderdik. Bobinaj sarımlarını ve rulman bakımlarını yapıp sıfır ayarında teslim ettiler. Çok dürüst ve işinin ehli esnaflar.',
+    highlight: 'Garantili Bobinaj & Tamir',
   },
   {
     id: 8,
-    author: "Murat Demir",
-    role: "Belediye Fen İşleri Tedarik",
+    author: 'Kemalettin Doğan',
+    role: 'Betonarme & Kalıp Taahhüt • Kayseri',
+    avatarText: 'KD',
     rating: 5,
-    timeAgo: "5 ay önce",
-    content: "Saha çalışanlarımız için aldığımız Ulaş 305-P ve 307-P çizmeler ile Emex iş botları uzun ömürlü çıktı. Yerli ve milli üreticimiz Emek Lastik'i gönül rahatlığıyla tavsiye ederim."
-  }
+    timeAgo: '5 ay önce',
+    productGroup: 'SKE 50 Elektronik Vibratör',
+    content:
+      'Perde ve kolon dökümlerinde SKE 50 omuz tipi elektronik vibratör kullanıyoruz. Kablo ve hortum boyu çok ideal, dar kalıplarda rahatça çalışılıyor. Fiyat/performans olarak Türkiye’de tek geçerim.',
+    highlight: 'Kolon & Perde Betonda İdeal',
+  },
 ];

@@ -1,243 +1,135 @@
 export interface ProductItem {
   id: string;
-  category: 'is-guvenligi' | 'cizme' | 'lastik-pvc' | 'keten-deniz' | 'bot-terlik';
-  categoryLabel: string;
-  brand: string;
-  code: string;
   name: string;
+  brand: string;
+  category: 'elektronik-vibrator' | 'konvertorlu-vibrator' | 'elektrikli-konvertor' | 'benzinli-konvertor' | 'kelle-vibrator';
+  categoryLabel: string;
+  code: string;
   sizes: string;
-  color: string;
+  specs: string;
   image: string;
+  specTableImage?: string;
 }
 
 export const PRODUCTS_LIST: ProductItem[] = [
-  // EMEX İŞ GÜVENLİĞİ AYAKKABILARI
   {
-    id: 'emex-ca10',
-    category: 'is-guvenligi',
-    categoryLabel: 'İş Güvenliği Ayakkabıları',
-    brand: 'EMEX',
-    code: 'ITALYAN CA10',
-    name: 'Emex Deri İş Güvenliği Ayakkabısı',
-    sizes: '40 - 45 Numara',
-    color: 'Siyah',
-    image: '/emek/products/emex-italyan-ca10.jpg'
+    id: 'ske-serisi-turuncu',
+    name: 'Kendinden Konvertörlü Elektronik Beton İç Vibratörü (220V)',
+    brand: 'SEÇKAY SKE SERİSİ',
+    category: 'elektronik-vibrator',
+    categoryLabel: 'Elektronik Tip Vibratörler (220V)',
+    code: 'SKE 40 / 50 / 58 / 60 / 65 / 75 / 80',
+    sizes: 'Ø40mm – Ø80mm Çap Seçenekleri',
+    specs: '50/200 Hz • 12.000 d/dk • 3x220V • 0,7 kW – 1,8 kW • 5m Hortum + 10m Kablo • Omuz Askılı',
+    image: '/seckay/kendinden-konvertorlu.jpg',
+    specTableImage: '/seckay/elektronik-1.png',
   },
   {
-    id: 'emex-yb107',
-    category: 'is-guvenligi',
-    categoryLabel: 'İş Güvenliği Ayakkabıları',
-    brand: 'EMEX',
-    code: 'MILANO YB107',
-    name: 'Emex Deri İş Ayakkabısı',
-    sizes: '40 - 45 Numara',
-    color: 'Siyah / Reflektörlü',
-    image: '/emek/products/emex-milano-yb107.jpg'
+    id: 'ske-serisi-sari',
+    name: 'Elektronik Tip Yüksek Frekanslı Beton İç Vibratörü (Şantiye Tipi)',
+    brand: 'SEÇKAY SKE SERİSİ',
+    category: 'elektronik-vibrator',
+    categoryLabel: 'Elektronik Tip Vibratörler (220V)',
+    code: 'SKE 50 / SKE 58 / SKE 60',
+    sizes: 'Ø50mm • Ø58mm • Ø60mm',
+    specs: 'Doğrudan 220V Şebeke Elektriği ile Çalışır • 12.000 d/dk • Harici Konvertör Gerektirmez',
+    image: '/seckay/elektronik-2.jpg',
+    specTableImage: '/seckay/elektronik-1.png',
   },
   {
-    id: 'emex-m1090',
-    category: 'is-guvenligi',
-    categoryLabel: 'İş Güvenliği Ayakkabıları',
-    brand: 'EMEX',
-    code: 'M 1090-S2',
-    name: 'Emex S2 İş Güvenlik Botu',
-    sizes: '40 - 45 Numara',
-    color: 'Siyah',
-    image: '/emek/products/emex-bot-m1090.jpg'
+    id: 'skv-serisi-turuncu',
+    name: 'Konvertörlü Tip Yüksek Frekans Beton İç Vibratörü (42V / 200Hz)',
+    brand: 'SEÇKAY SKV SERİSİ',
+    category: 'konvertorlu-vibrator',
+    categoryLabel: 'Konvertörlü Tip Vibratörler (42V)',
+    code: 'SKV 40 / 50 / 58 / 60 / 65 / 75 / 80',
+    sizes: 'Ø40mm – Ø80mm Çap Seçenekleri',
+    specs: '200 Hz • 12.000 d/dk • 42-55V Güvenli Gerilim • 0,5 kW – 2,1 kW • 5m Hortum + 13m Kablo',
+    image: '/seckay/konvertorlu-vibrator.jpg',
+    specTableImage: '/seckay/konvertorlu-1.png',
   },
   {
-    id: 'emex-s1030',
-    category: 'is-guvenligi',
-    categoryLabel: 'İş Güvenliği Ayakkabıları',
-    brand: 'EMEX',
-    code: 'MADRID S1030',
-    name: 'Emex Süet İş Güvenliği Ayakkabısı',
-    sizes: '40 - 45 Numara',
-    color: 'Gri / Lacivert',
-    image: '/emek/products/emex-madrid-s1030.jpg'
-  },
-
-  // ULAŞ PVC & KAUÇUK ÇİZMELER
-  {
-    id: 'ulas-305p',
-    category: 'cizme',
-    categoryLabel: 'PVC & Kauçuk Çizmeler',
-    brand: 'ULAŞ',
-    code: '305-P',
-    name: 'Ulaş Uzun PVC İş Çizmesi',
-    sizes: '41 - 45 Numara',
-    color: 'Siyah / Krep Taban',
-    image: '/emek/products/ulas-305p-siyah.jpg'
+    id: 'skv-serisi-sari',
+    name: 'Ağır Hizmet Konvertörlü Beton İç Vibratörü (Baraj & Köprü Tipi)',
+    brand: 'SEÇKAY SKV SERİSİ',
+    category: 'konvertorlu-vibrator',
+    categoryLabel: 'Konvertörlü Tip Vibratörler (42V)',
+    code: 'SKV 60 / SKV 65 / SKV 75 / SKV 80',
+    sizes: 'Ø60mm • Ø65mm • Ø75mm • Ø80mm',
+    specs: '200 Hz • 12.000 d/dk • 42-55V • Yüksek Vuruş Gücü • Aşınmaya Dayanıklı Çelik Şişe',
+    image: '/seckay/konvertorlu-sari.jpg',
+    specTableImage: '/seckay/konvertorlu-1.png',
   },
   {
-    id: 'ulas-307p',
-    category: 'cizme',
-    categoryLabel: 'PVC & Kauçuk Çizmeler',
-    brand: 'ULAŞ',
-    code: '307-P',
-    name: 'Ulaş Uzun Sarı İş Güvenliği Çizmesi',
-    sizes: '41 - 45 Numara',
-    color: 'Sarı / Siyah Taban',
-    image: '/emek/products/ulas-307p-sari.jpg'
+    id: 'sk4-elektrikli-konvertor',
+    name: 'SK 4 Dört Çıkışlı Elektrikli Yüksek Frekans Konvertörü (4 kW)',
+    brand: 'SEÇKAY SK SERİSİ',
+    category: 'elektrikli-konvertor',
+    categoryLabel: 'Elektrikli Konvertörler',
+    code: 'SK 4 (4 Prizli)',
+    sizes: '4 Çıkış Prizi • 4,0 kW Güç',
+    specs: 'Giriş: 380V 50Hz 8,6A • Çıkış: 42-55V 200Hz 60A • Aynı Anda Çoklu Vibratör Çalıştırma',
+    image: '/seckay/slide-1.jpg',
+    specTableImage: '/seckay/elektrikli-1.png',
   },
   {
-    id: 'ulas-207k',
-    category: 'cizme',
-    categoryLabel: 'PVC & Kauçuk Çizmeler',
-    brand: 'ULAŞ',
-    code: '207-K',
-    name: 'Ulaş Uzun Krep / Kauçuk Çizme',
-    sizes: '41 - 45 Numara',
-    color: 'Haki Yeşili',
-    image: '/emek/products/ulas-207k-haki.jpg'
+    id: 'sk2-elektrikli-konvertor',
+    name: 'SK 2 İki Çıkışlı Elektrikli Yüksek Frekans Konvertörü (2,2 kW)',
+    brand: 'SEÇKAY SK SERİSİ',
+    category: 'elektrikli-konvertor',
+    categoryLabel: 'Elektrikli Konvertörler',
+    code: 'SK 2 (2 Prizli)',
+    sizes: '2 Çıkış Prizi • 2,2 kW Güç',
+    specs: 'Giriş: 380V 50Hz 4,9A • Çıkış: 42-55V 200Hz 30A • Koruma Kafesli Şantiye Şasesi',
+    image: '/seckay/slide-6.jpg',
+    specTableImage: '/seckay/elektrikli-1.png',
   },
   {
-    id: 'ulas-320p',
-    category: 'cizme',
-    categoryLabel: 'PVC & Kauçuk Çizmeler',
-    brand: 'ULAŞ',
-    code: '320-P',
-    name: 'Ulaş İçi Peluşlu Kışlık Çizme',
-    sizes: '36 - 45 Numara',
-    color: 'Haki',
-    image: '/emek/products/ulas-320p-peluslu.jpg'
-  },
-
-  // EMEK LASTİK & PVC AYAKKABILAR
-  {
-    id: 'emek-101a2',
-    category: 'lastik-pvc',
-    categoryLabel: 'Lastik & PVC Ayakkabılar',
-    brand: 'EMEK',
-    code: '101-A2',
-    name: 'Emek Ökçeli Düz Lastik Ayakkabı',
-    sizes: '26 - 43 Numara',
-    color: 'Siyah',
-    image: '/emek/products/emek-101-a2.jpg'
+    id: 'sk3-elektrikli-konvertor',
+    name: 'SK 3 Yüksek Kapasiteli İki Çıkışlı Elektrikli Konvertör (3,2 kW)',
+    brand: 'SEÇKAY SK SERİSİ',
+    category: 'elektrikli-konvertor',
+    categoryLabel: 'Elektrikli Konvertörler',
+    code: 'SK 3 (2 Prizli Ağır Tip)',
+    sizes: '2 Çıkış Prizi • 3,2 kW Güç',
+    specs: 'Giriş: 380V 50Hz 7A • Çıkış: 42-55V 200Hz 45A • 3 Faz Kontrollü Güvenli Çalışma',
+    image: '/seckay/elektrikli-3.jpg',
+    specTableImage: '/seckay/elektrikli-1.png',
   },
   {
-    id: 'emek-101a4',
-    category: 'lastik-pvc',
-    categoryLabel: 'Lastik & PVC Ayakkabılar',
-    brand: 'EMEK',
-    code: '101-A4',
-    name: 'Emek Kar Tipi Dişli Lastik Ayakkabı',
-    sizes: '21 - 46 Numara',
-    color: 'Siyah',
-    image: '/emek/products/emek-101-a4.jpg'
+    id: 'skbk-b1-benzinli-1',
+    name: 'SKBK B1 Honda GX 160 Motorlu Benzinli Konvertör (2 Çıkışlı)',
+    brand: 'SEÇKAY SKBK SERİSİ',
+    category: 'benzinli-konvertor',
+    categoryLabel: 'Benzinli Konvertörler',
+    code: 'SKBK B1 (Honda GX 160)',
+    sizes: '5,5 HP • 2 Çıkış Prizi • 52 Kg',
+    specs: 'Honda GX 160 (163 cm³) 3.000 RPM Motor • Çıkış: 42/55V 200Hz 27A • Elektriksiz Sahalar İçin',
+    image: '/seckay/benzinli-1.jpg',
+    specTableImage: '/seckay/benzinli-2.png',
   },
   {
-    id: 'kursun-101b1',
-    category: 'lastik-pvc',
-    categoryLabel: 'Lastik & PVC Ayakkabılar',
-    brand: 'KURŞUN',
-    code: '101-B1',
-    name: 'Kurşun Düz Tip Lastik Ayakkabı',
-    sizes: '21 - 47 Numara',
-    color: 'Siyah',
-    image: '/emek/products/kursun-101-b1.jpg'
+    id: 'skbk-b1-benzinli-2',
+    name: 'Mobil Şantiye Tipi Benzinli Frekans Konvertörü (2 Prizli)',
+    brand: 'SEÇKAY SKBK SERİSİ',
+    category: 'benzinli-konvertor',
+    categoryLabel: 'Benzinli Konvertörler',
+    code: 'SKBK B1-PRO',
+    sizes: '3,6 Lt Depo • Hava Soğutmalı',
+    specs: '42/55V 200Hz Sabit Frekans Çıkışı • Çelik Koruma Kafesi • Yol, Köprü ve Altyapı Şantiyelerine Uygun',
+    image: '/seckay/benzinli-3.jpg',
+    specTableImage: '/seckay/benzinli-2.png',
   },
   {
-    id: 'ugur-101c4',
-    category: 'lastik-pvc',
-    categoryLabel: 'Lastik & PVC Ayakkabılar',
-    brand: 'UĞUR',
-    code: '101-C4',
-    name: 'Uğur Bağlı Tip Lastik Ayakkabı',
-    sizes: '26 - 47 Numara',
-    color: 'Siyah',
-    image: '/emek/products/ugur-101-c4.jpg'
+    id: 'kelle-vibrator-seti',
+    name: 'Kelle Vibratörler & Takmatik Yedek Vibratör Şişeleri (Ø38 – Ø80)',
+    brand: 'SEÇKAY KELLE SERİSİ',
+    category: 'kelle-vibrator',
+    categoryLabel: 'Kelle Vibratörler & Yedek Parça',
+    code: 'SKE / SKV KELLE (38-40-50-58-60-65-75-80)',
+    sizes: '38 • 40 • 50 • 58 • 60 • 65 • 75 • 80 mm',
+    specs: '12.000 d/dk • SKE (3x220V) ve SKV (42-55V) Uyumlu • Takmatik Hızlı Değişim • Yüksek Frekanslı',
+    image: '/seckay/kelle-3.jpg',
+    specTableImage: '/seckay/kelle-1.png',
   },
-
-  // KETEN & DENİZ AYAKKABILARI
-  {
-    id: 'emeks-106b12',
-    category: 'keten-deniz',
-    categoryLabel: 'Keten & Deniz Ayakkabıları',
-    brand: "EMEK'S",
-    code: '106-B12',
-    name: "Emek's Bağlı Keten Ayakkabı",
-    sizes: '40 - 45 Numara',
-    color: 'Siyah',
-    image: '/emek/products/emeks-keten-106b12.jpg'
-  },
-  {
-    id: 'emeks-106c3',
-    category: 'keten-deniz',
-    categoryLabel: 'Keten & Deniz Ayakkabıları',
-    brand: "EMEK'S",
-    code: '106-C3',
-    name: "Emek's Zenne Keten Ayakkabı",
-    sizes: '36 - 40 Numara',
-    color: 'Lacivert',
-    image: '/emek/products/emeks-keten-106c3.jpg'
-  },
-  {
-    id: 'seaworld-114a1',
-    category: 'keten-deniz',
-    categoryLabel: 'Keten & Deniz Ayakkabıları',
-    brand: 'SEA WORLD',
-    code: '114-A1',
-    name: 'Sea World Kaymaz Deniz Ayakkabısı',
-    sizes: '26 - 46 Numara',
-    color: 'Mavi / Şeffaf / Siyah',
-    image: '/emek/products/seaworld-deniz-114a1.jpg'
-  },
-  {
-    id: 'efe-104a2',
-    category: 'keten-deniz',
-    categoryLabel: 'Keten & Deniz Ayakkabıları',
-    brand: 'EFE',
-    code: '104-A2',
-    name: 'Efe Klasik PVC Ayakkabı',
-    sizes: '38 - 45 Numara',
-    color: 'Siyah',
-    image: '/emek/products/efe-pvc-104a2.jpg'
-  },
-
-  // MEYKERS BOT & EMEK EVA TERLİK
-  {
-    id: 'meykers-bot-1',
-    category: 'bot-terlik',
-    categoryLabel: 'Spor Bot & EVA Terlik',
-    brand: 'MEYKERS',
-    code: 'KAR BOTU',
-    name: 'Meykers Fermuarlı Kışlık Kar Botu',
-    sizes: '36 - 45 Numara',
-    color: 'Siyah / Kahve',
-    image: '/emek/products/meykers-bot-1.jpg'
-  },
-  {
-    id: 'meykers-bot-2',
-    category: 'bot-terlik',
-    categoryLabel: 'Spor Bot & EVA Terlik',
-    brand: 'MEYKERS',
-    code: 'KIŞLIK BOT',
-    name: 'Meykers Su Geçirmez Kışlık Bot',
-    sizes: '36 - 45 Numara',
-    color: 'Siyah',
-    image: '/emek/products/meykers-bot-2.jpg'
-  },
-  {
-    id: 'eva-1808',
-    category: 'bot-terlik',
-    categoryLabel: 'Spor Bot & EVA Terlik',
-    brand: 'EMEK EVA',
-    code: '18-08',
-    name: 'Emek EVA Hafif Taban Terlik',
-    sizes: '24 - 35 Numara',
-    color: 'Çok Renkli',
-    image: '/emek/products/eva-18-08.jpg'
-  },
-  {
-    id: 'eva-1820',
-    category: 'bot-terlik',
-    categoryLabel: 'Spor Bot & EVA Terlik',
-    brand: 'EMEK EVA',
-    code: '18-20',
-    name: 'Emek EVA Konfor Terlik Grubu',
-    sizes: '24 - 29 Numara',
-    color: 'Çok Renkli',
-    image: '/emek/products/eva-18-20.jpg'
-  }
 ];
